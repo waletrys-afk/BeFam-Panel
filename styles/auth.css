@@ -1,0 +1,418 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  touch-action: pan-y;
+  font-family:
+    "Playfair Display",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+}
+
+html,
+:host {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #0a0a0f;
+  background-image:
+    radial-gradient(
+      circle at 25% 50%,
+      rgba(255, 45, 117, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 80%,
+      rgba(88, 101, 242, 0.08) 0%,
+      transparent 50%
+    );
+  background-attachment: fixed;
+}
+
+h1, h2, h3, p, b, h4 {
+  color: rgba(255, 255, 255, 0.877);
+}
+
+main {
+  width: 1000px;
+  height: 800px;
+  background-color: #13111c;
+  position: relative;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  box-shadow: 0 10px 10px #6d42d349;
+}
+
+.authb {
+  position: relative;
+  width: 80%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.authnam {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+
+  text-align: left;
+  width: 100%;
+}
+
+.authnam h2 {
+  width: 43px;
+  height: 43px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  background: rgba(214, 214, 214, 0.473);
+  color: white;
+  text-decoration: none;
+}
+
+.authnam h3 {
+  font-size: 23px;
+}
+
+.authb p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.767);
+}
+
+.txtdiva {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+  position: relative;
+  top: 60px;
+  align-items: center;
+}
+
+.txtdiva svg {
+  width: 25px;
+  height: 25px;
+  color: white;
+}
+
+.bsvg {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.219);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.mtxtdiv {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  top: 2px;
+}
+
+.mtxtdiv h4 {
+  margin: 0;
+}
+
+.mtxtdiv p {
+  margin: 0;
+}
+
+.authmain {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.authmain::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: #f1f1f100;
+  color: #673fc5;
+  display: none;
+}
+
+.authmain p {
+  margin: 0;
+  color: rgba(180, 180, 180, 0.671);
+  margin-top: 10px;
+}
+
+.authmain h1 {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
+.authmain form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.authbk {
+  text-align: left;
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.abknamm {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.abknamm svg {
+  color: rgba(255, 255, 255, 0.623);
+  width: 18px;
+  height: 18px;
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+.abknamm h4 {
+  color: rgba(255, 255, 255, 0.89);
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.authbk input {
+  height: 40px;
+  border-radius: 9px;
+  border: 1px solid #2e2b3b;
+  background: #252233;
+  outline: none;
+  color: white;
+  font-size: 13.5px;
+  padding-left: 20px;
+  transition: 0.2s;
+}
+
+.authbk input:focus {
+  border: 1px solid #8b5cf6;
+}
+
+.authbk input::placeholder {
+  color: rgba(196, 196, 196, 0.699);
+}
+
+.authbk p {
+  margin-top: 0;
+  font-size: 13px;
+}
+
+.authmain form button {
+  width: 100%;
+  height: 50px;
+  margin-top: 30px;
+  border: 0;
+  border-radius: 9px;
+  font-size: 15px;
+  color: white;
+  background-color: #8b5cf6;
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+  transition: 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.authmain form button:hover {
+  background-color: #673fc5;
+  box-shadow: 0 4px 25px rgba(139, 92, 246, 0.3);
+}
+
+.rzdil {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 80%;
+  overflow: hidden;
+}
+
+.rzdil p {
+  font-size: 14px;
+  color: rgba(161, 161, 161, 0.582);
+}
+
+.rzdil div {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(161, 161, 161, 0.582);
+  position: relative;
+  top: 4px;
+
+  margin: 25px 0;
+}
+
+.prlg {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 15px;
+}
+
+.prlg a {
+  width: 80%;
+  height: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(167, 167, 167, 0.397);
+  border-radius: 9px;
+  transition: 0.2s;
+  color: white;
+  text-decoration: none;
+}
+
+.prlg a:hover {
+  color: #673fc5;
+  border: 1px solid #673fc5;
+  background-color: #7b5bc718;
+}
+
+.errtext {
+  width: 80%;
+  max-width: 80%;
+  padding: 10px 0;
+  background: rgba(202, 0, 0, 0.123);
+  margin: 0;
+  border-radius: 9px;
+  border: 1px solid rgba(255, 0, 0, 0.658);
+  text-align: left;
+  display: none;
+}
+
+.errtext p {
+  color: red;
+  margin-left: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.noneakk {
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  padding-bottom: 20px;
+  background: #1a1825;
+  position: relative;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  box-shadow: 0 5px 10px #6d42d349;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: 0.3s;
+  border: 1px solid #673fc5be;
+  text-align: center;
+}
+
+.noneakk i {
+  color: #673fc5;
+  font-size: 55px;
+  margin-top: 50px;
+  border: 3px solid #673fc5;
+  border-radius: 100%;
+  padding: 15px;
+}
+
+.noneakk p {
+  width: 85%;
+  color: rgba(255, 255, 255, 0.712);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1010px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+    padding-bottom: 40px;
+
+    top: 80%;
+  }
+
+  .authmain {
+    width: 100%;
+  }
+
+  .authmain form {
+    width: 90%;
+  }
+
+  .txtdiva {
+    display: none;
+  }
+
+  .authbaner::before,
+  .authbaner::after {
+    display: none;
+  }
+}
+

@@ -1,0 +1,14 @@
+Options -MultiViews
+RewriteEngine On
+
+# Если файл существует — отдаём его
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# Если запросили файл без .php — добавляем .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*?)/?$ $1.php [L]
+
+# Если запросили папку — ищем index.php
+DirectoryIndex index.php
